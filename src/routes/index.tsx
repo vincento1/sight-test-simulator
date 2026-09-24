@@ -162,7 +162,7 @@ function Simulador() {
     );
   }
 
-  if (screen === "quiz") {
+  if (screen === "quiz" && quiz[current]) {
     const q = quiz[current];
     const chosen = answers[q.id];
     const answered = chosen !== undefined;
