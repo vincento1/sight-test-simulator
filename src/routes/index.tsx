@@ -14,13 +14,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Simulador MedQuest: 20 questões sorteadas de 100 sobre sistema visual e somatossensorial, com gabarito comentado.",
+          "Simulador MedQuest: 20 questões sorteadas de 150 sobre sistemas visual, somatossensorial e auditivo, com gabarito comentado.",
       },
       { property: "og:title", content: "MedQuest | Simulador de Prova" },
       {
         property: "og:description",
         content:
-          "Simulador MedQuest: 20 questões sorteadas de 100 sobre sistema visual e somatossensorial, com gabarito comentado.",
+          "Simulador MedQuest: 20 questões sorteadas de 150 sobre sistemas visual, somatossensorial e auditivo, com gabarito comentado.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -47,7 +47,7 @@ type Screen = "intro" | "start" | "quiz" | "result";
 
 function Simulador() {
   const [screen, setScreen] = useState<Screen>("intro");
-  const [subject, setSubject] = useState<"todos" | "visual" | "somato">("todos");
+  const [subject, setSubject] = useState<"todos" | "visual" | "somato" | "auditivo">("todos");
   const [levels, setLevels] = useState<Difficulty[]>(DIFFICULTIES);
   const [quiz, setQuiz] = useState<Question[]>([]);
   const [answers, setAnswers] = useState<Record<number, number>>({});
@@ -156,6 +156,12 @@ function Simulador() {
               onClick={() => setSubject("somato")}
               title="Sistema Somatossensorial"
               subtitle="Receptores, vias e dor"
+            />
+            <ChoiceCard
+              active={subject === "auditivo"}
+              onClick={() => setSubject("auditivo")}
+              title="Sistema Auditivo"
+              subtitle="Orelha, cóclea e vias auditivas"
             />
           </div>
 
