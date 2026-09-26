@@ -10,17 +10,17 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Simulador de Prova | Sistema Visual" },
+      { title: "MedQuest | Simulador de Prova" },
       {
         name: "description",
         content:
-          "Simulado de 20 questões sorteadas de um banco de 50 sobre o sistema visual, com gabarito comentado e correção imediata.",
+          "Simulador MedQuest: 20 questões sorteadas de 100 sobre sistema visual e somatossensorial, com gabarito comentado.",
       },
-      { property: "og:title", content: "Simulador de Prova | Sistema Visual" },
+      { property: "og:title", content: "MedQuest | Simulador de Prova" },
       {
         property: "og:description",
         content:
-          "Simulado de 20 questões sorteadas de um banco de 50 sobre o sistema visual, com gabarito comentado e correção imediata.",
+          "Simulador MedQuest: 20 questões sorteadas de 100 sobre sistema visual e somatossensorial, com gabarito comentado.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -43,11 +43,11 @@ function shuffle<T>(arr: T[]): T[] {
   return a;
 }
 
-type Screen = "start" | "quiz" | "result";
+type Screen = "intro" | "start" | "quiz" | "result";
 
 function Simulador() {
-  const [screen, setScreen] = useState<Screen>("start");
-  const [subject, setSubject] = useState<"todos" | "visual">("todos");
+  const [screen, setScreen] = useState<Screen>("intro");
+  const [subject, setSubject] = useState<"todos" | "visual" | "somato">("todos");
   const [levels, setLevels] = useState<Difficulty[]>(DIFFICULTIES);
   const [quiz, setQuiz] = useState<Question[]>([]);
   const [answers, setAnswers] = useState<Record<number, number>>({});
@@ -89,25 +89,56 @@ function Simulador() {
 
   const score = quiz.filter((q) => answers[q.id] === q.answer).length;
 
+  if (screen === "intro") {
+    return (
+      <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-hero px-6 text-primary-foreground">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-foreground/30 to-transparent" />
+        <div className="pointer-events-none absolute -bottom-40 left-1/2 size-[36rem] -translate-x-1/2 rounded-full bg-wine-glow/30 blur-3xl" />
+        <div className="relative flex max-w-2xl flex-col items-center text-center">
+          <h1 className="text-7xl font-medium tracking-tight sm:text-8xl md:text-9xl">
+            MedQuest
+          </h1>
+          <p className="mt-2 text-lg font-light text-primary-foreground/85 sm:text-xl">
+            4º semestre — feito por Cezar
+          </p>
+          <div className="mt-8 h-px w-24 bg-primary-foreground/30" />
+          <p className="mt-8 max-w-xl text-base font-light leading-relaxed text-primary-foreground/80 sm:text-lg">
+            Um simulador de prova com {bank.length} questões baseadas nos roteiros
+            de estudo. Cada prova sorteia 20 questões, com correção imediata e
+            gabarito comentado para você revisar Sistema Visual e Sistema
+            Somatossensorial.
+          </p>
+          <button
+            type="button"
+            onClick={() => setScreen("start")}
+            className="mt-12 rounded-md bg-primary-foreground px-16 py-4 text-3xl font-medium text-wine shadow-2xl shadow-wine-deep/60 transition-transform hover:-translate-y-0.5 sm:text-4xl"
+          >
+            Iniciar
+          </button>
+        </div>
+      </main>
+    );
+  }
+
   if (screen === "start") {
     return (
       <Shell>
         <header className="mb-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-            Roteiro 2 — Visão
-          </p>
-          <h1 className="mt-3 text-4xl font-bold sm:text-5xl">
-            Simulador de Prova
+          <button type="button" onClick={() => setScreen("intro")} className="text-xs font-semibold uppercase tracking-[0.22em] text-primary hover:opacity-70">
+            ← MedQuest
+          </button>
+          <h1 className="mt-3 text-4xl font-medium sm:text-5xl">
+            Monte sua prova
           </h1>
           <p className="mt-4 max-w-xl text-muted-foreground">
-            20 questões sorteadas de um banco de 50, com correção imediata e
-            gabarito comentado.
+            20 questões sorteadas do banco, com correção imediata e gabarito
+            comentado.
           </p>
         </header>
 
-        <section className="rounded-2xl border bg-card p-6 shadow-sm sm:p-8">
+        <section className="rounded-lg border bg-card p-6 shadow-sm sm:p-8">
           <h2 className="text-lg font-semibold">Assunto</h2>
-          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
             <ChoiceCard
               active={subject === "todos"}
               onClick={() => setSubject("todos")}
@@ -120,6 +151,12 @@ function Simulador() {
               title="Sistema Visual"
               subtitle="Anatomia e vias da visão"
             />
+            <ChoiceCard
+              active={subject === "somato"}
+              onClick={() => setSubject("somato")}
+              title="Sistema Somatossensorial"
+              subtitle="Receptores, vias e dor"
+            />
           </div>
 
           <h2 className="mt-8 text-lg font-semibold">Nível de dificuldade</h2>
@@ -131,7 +168,7 @@ function Simulador() {
                   key={level}
                   type="button"
                   onClick={() => toggleLevel(level)}
-                  className={`rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
+                  className={`rounded-md border px-4 py-2 text-sm font-medium transition-colors ${
                     active
                       ? "border-primary bg-primary text-primary-foreground"
                       : "bg-card text-muted-foreground hover:bg-secondary"
@@ -152,7 +189,7 @@ function Simulador() {
               type="button"
               disabled={pool.length === 0}
               onClick={start}
-              className="rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-40"
+              className="rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-40"
             >
               Iniciar prova
             </button>
@@ -185,7 +222,7 @@ function Simulador() {
           />
         </div>
 
-        <article className="rounded-2xl border bg-card p-6 shadow-sm sm:p-8">
+        <article className="rounded-lg border bg-card p-6 shadow-sm sm:p-8">
           <p className="text-lg leading-relaxed">{q.statement}</p>
 
           <div className="mt-6 space-y-3">
@@ -206,7 +243,7 @@ function Simulador() {
                   type="button"
                   disabled={answered}
                   onClick={() => answer(q.id, i)}
-                  className={`flex w-full items-start gap-3 rounded-xl border p-4 text-left transition-colors ${style}`}
+                  className={`flex w-full items-start gap-3 rounded-md border p-4 text-left transition-colors ${style}`}
                 >
                   <span
                     className={`mt-0.5 flex size-7 shrink-0 items-center justify-center rounded-lg text-xs font-bold ${
@@ -226,7 +263,7 @@ function Simulador() {
           </div>
 
           {answered && (
-            <div className="mt-6 rounded-xl border bg-surface p-5">
+            <div className="mt-6 rounded-md border bg-surface p-5">
               <p
                 className={`text-sm font-bold ${
                   chosen === q.answer ? "text-success" : "text-error"
@@ -248,7 +285,7 @@ function Simulador() {
             type="button"
             onClick={() => setCurrent((c) => Math.max(0, c - 1))}
             disabled={current === 0}
-            className="rounded-xl border px-5 py-3 text-sm font-medium transition-colors hover:bg-secondary disabled:opacity-40"
+            className="rounded-md border px-5 py-3 text-sm font-medium transition-colors hover:bg-secondary disabled:opacity-40"
           >
             Anterior
           </button>
@@ -256,7 +293,7 @@ function Simulador() {
             <button
               type="button"
               onClick={() => setScreen("result")}
-              className="rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              className="rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
               Finalizar prova
             </button>
@@ -264,7 +301,7 @@ function Simulador() {
             <button
               type="button"
               onClick={() => setCurrent((c) => c + 1)}
-              className="rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              className="rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
             >
               Próxima
             </button>
@@ -282,7 +319,7 @@ function Simulador() {
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">
           Resultado
         </p>
-        <h1 className="mt-3 text-5xl font-bold">
+        <h1 className="mt-3 text-6xl font-medium">
           {score}/{quiz.length}
         </h1>
         <p className="mt-2 text-muted-foreground">{pct}% de acerto</p>
@@ -295,7 +332,7 @@ function Simulador() {
           return (
             <div
               key={q.id}
-              className={`rounded-xl border p-5 ${
+              className={`rounded-md border p-5 ${
                 ok ? "border-success bg-success-soft" : "border-error bg-error-soft"
               }`}
             >
@@ -326,14 +363,14 @@ function Simulador() {
         <button
           type="button"
           onClick={start}
-          className="rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          className="rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
         >
           Nova prova
         </button>
         <button
           type="button"
           onClick={() => setScreen("start")}
-          className="rounded-xl border px-6 py-3 text-sm font-medium transition-colors hover:bg-secondary"
+          className="rounded-md border px-6 py-3 text-sm font-medium transition-colors hover:bg-secondary"
         >
           Mudar filtros
         </button>
@@ -345,6 +382,7 @@ function Simulador() {
 function Shell({ children }: { children: React.ReactNode }) {
   return (
     <main className="min-h-screen bg-background px-4 py-12">
+      <div className="pointer-events-none fixed inset-x-0 top-0 h-1.5 bg-hero" />
       <div className="mx-auto w-full max-w-3xl">{children}</div>
     </main>
   );
@@ -365,7 +403,7 @@ function ChoiceCard({
     <button
       type="button"
       onClick={onClick}
-      className={`rounded-xl border p-4 text-left transition-colors ${
+      className={`rounded-md border p-4 text-left transition-colors ${
         active
           ? "border-primary bg-secondary"
           : "border-border bg-card hover:bg-secondary"
