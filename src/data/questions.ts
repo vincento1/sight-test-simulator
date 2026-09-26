@@ -1,8 +1,9 @@
+import { somatoQuestions } from "./questions-somato";
 export type Difficulty = "facil" | "media" | "dificil";
 
 export type Question = {
   id: number;
-  subject: "visual";
+  subject: "visual" | "somato";
   difficulty: Difficulty;
   statement: string;
   options: string[];
@@ -13,6 +14,7 @@ export type Question = {
 export const SUBJECTS = [
   { id: "todos", label: "Todos os assuntos" },
   { id: "visual", label: "Sistema Visual (Roteiro 2 - Visão)" },
+  { id: "somato", label: "Sistema Somatossensorial" },
 ] as const;
 
 export const DIFFICULTY_LABEL: Record<Difficulty, string> = {
@@ -21,7 +23,7 @@ export const DIFFICULTY_LABEL: Record<Difficulty, string> = {
   dificil: "Difícil",
 };
 
-export const questions: Question[] = [
+const visualQuestions: Question[] = [
   {
     id: 1,
     subject: "visual",
@@ -857,3 +859,5 @@ export const questions: Question[] = [
       "Fotorreceptores → bipolares → ganglionares (axônios formam o NC II) → quiasma → trato óptico → CGL → radiações ópticas → V1.",
   },
 ];
+
+export const questions: Question[] = [...visualQuestions, ...somatoQuestions];
