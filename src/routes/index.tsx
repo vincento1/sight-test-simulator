@@ -157,6 +157,12 @@ function Simulador() {
               title="Sistema Somatossensorial"
               subtitle="Receptores, vias e dor"
             />
+            <ChoiceCard
+              active={subject === "auditivo"}
+              onClick={() => setSubject("auditivo")}
+              title="Sistema Auditivo"
+              subtitle="Orelha, cóclea e vias auditivas"
+            />
           </div>
 
           <h2 className="mt-8 text-lg font-semibold">Nível de dificuldade</h2>
