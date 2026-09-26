@@ -1,9 +1,10 @@
 import { somatoQuestions } from "./questions-somato";
+import { auditivoQuestions } from "./questions-auditivo";
 export type Difficulty = "facil" | "media" | "dificil";
 
 export type Question = {
   id: number;
-  subject: "visual" | "somato";
+  subject: "visual" | "somato" | "auditivo";
   difficulty: Difficulty;
   statement: string;
   options: string[];
@@ -15,6 +16,7 @@ export const SUBJECTS = [
   { id: "todos", label: "Todos os assuntos" },
   { id: "visual", label: "Sistema Visual (Roteiro 2 - Visão)" },
   { id: "somato", label: "Sistema Somatossensorial" },
+  { id: "auditivo", label: "Sistema Auditivo" },
 ] as const;
 
 export const DIFFICULTY_LABEL: Record<Difficulty, string> = {
@@ -860,4 +862,4 @@ const visualQuestions: Question[] = [
   },
 ];
 
-export const questions: Question[] = [...visualQuestions, ...somatoQuestions];
+export const questions: Question[] = [...visualQuestions, ...somatoQuestions, ...auditivoQuestions];
