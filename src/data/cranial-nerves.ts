@@ -39,7 +39,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       "Sensitiva pura (olfato especial). Conduz os estímulos químicos odoríferos da mucosa olfatória nasal até o bulbo olfatório e córtex piriforme.",
     semiotecnica: [
       {
-        title: "Passo a passo à beira do leito",
+        title: "Passo a passo à da semiotécnica",
         steps: [
           "Inspecione e certifique-se de que as fossas nasais estão pérvias e desobstruídas (sem rinite aguda, congestão ou pólipos).",
           "Solicite ao paciente que feche bem os olhos e oclua uma das narinas com o dedo indicador.",
