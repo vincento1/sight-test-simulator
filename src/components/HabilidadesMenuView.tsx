@@ -55,7 +55,7 @@ export function HabilidadesMenuView({ onBack, onSelectNervosCranianos }: Habilid
           onClick={onBack}
           className="mb-8 gap-2 border-white/20 bg-white/5 text-sm font-medium text-white/90 backdrop-blur-sm transition-all hover:bg-white/10 hover:text-white"
         >
-          <ArrowLeft className="size-4" /> Voltar à seleção de trilha
+          <ArrowLeft className="size-4" /> Voltar à seleção de assuntos
         </Button>
 
         <header className="mb-8">

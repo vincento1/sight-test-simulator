@@ -163,11 +163,10 @@ export function CranialNervesView({ onBack }: CranialNervesViewProps) {
                   key={tab.id}
                   type="button"
                   onClick={() => setFilterType(tab.id)}
-                  className={`rounded-full px-3 py-1 text-xs font-medium transition-all ${
-                    filterType === tab.id
+                  className={`rounded-full px-3 py-1 text-xs font-medium transition-all ${filterType === tab.id
                       ? "bg-white text-zinc-950 shadow-md"
                       : "border border-white/15 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
-                  }`}
+                    }`}
                 >
                   {tab.label}
                 </button>
@@ -299,11 +298,10 @@ export function CranialNervesView({ onBack }: CranialNervesViewProps) {
                 <button
                   type="button"
                   onClick={() => setActiveTab("semiotecnica")}
-                  className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-                    activeTab === "semiotecnica"
+                  className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${activeTab === "semiotecnica"
                       ? "bg-white text-zinc-950 font-semibold"
                       : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
-                  }`}
+                    }`}
                 >
                   <Stethoscope className="size-3.5" /> Semiotécnica Prática
                 </button>
@@ -311,11 +309,10 @@ export function CranialNervesView({ onBack }: CranialNervesViewProps) {
                 <button
                   type="button"
                   onClick={() => setActiveTab("clinica")}
-                  className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-                    activeTab === "clinica"
+                  className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${activeTab === "clinica"
                       ? "bg-white text-zinc-950 font-semibold"
                       : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
-                  }`}
+                    }`}
                 >
                   <AlertTriangle className="size-3.5" /> Alterações Clínicas
                 </button>
@@ -323,13 +320,12 @@ export function CranialNervesView({ onBack }: CranialNervesViewProps) {
                 <button
                   type="button"
                   onClick={() => setActiveTab("dicas")}
-                  className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-                    activeTab === "dicas"
+                  className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${activeTab === "dicas"
                       ? "bg-white text-zinc-950 font-semibold"
                       : "bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
-                  }`}
+                    }`}
                 >
-                  <Lightbulb className="size-3.5" /> Dicas do Professor
+                  <Lightbulb className="size-3.5" /> Fique de olho
                 </button>
               </div>
             </DialogHeader>
@@ -400,7 +396,7 @@ export function CranialNervesView({ onBack }: CranialNervesViewProps) {
                 <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 p-4">
                   <h4 className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-300">
                     <Lightbulb className="size-4 text-amber-400" />
-                    Pérolas Clínicas & Observações do Professor
+                    Importante lembrar na prova
                   </h4>
 
                   <ul className="mt-3 space-y-2.5">

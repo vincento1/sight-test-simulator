@@ -128,8 +128,8 @@ function Simulador() {
           </p>
           <div className="mt-8 h-px w-24 bg-primary-foreground/30" />
           <p className="mt-8 max-w-xl text-base font-light leading-relaxed text-primary-foreground/80 sm:text-lg">
-            Plataforma de estudos médicos: simulado de 150 questões de Morfofuncional com gabarito comentado
-            e módulo prático de Habilidades Clínicas (Neurologia & Nervos Cranianos).
+            Plataforma para ajudar nos estudos: simulado de 150 questões de Morfofuncional com gabarito comentado
+            e módulo de revisão para Habilidades Clínicas (Neurologia & Nervos Cranianos).
           </p>
           <Button
             type="button"
@@ -227,11 +227,10 @@ function Simulador() {
                     type="button"
                     aria-pressed={active}
                     onClick={() => toggleLevel(level)}
-                    className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${
-                      active
+                    className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${active
                         ? "bg-white text-zinc-950 shadow-md"
                         : "border border-white/15 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
-                    }`}
+                      }`}
                   >
                     {DIFFICULTY_LABEL[level]} ({counts[level]})
                   </button>
@@ -323,13 +322,12 @@ function Simulador() {
                     className={`flex w-full items-start gap-3 rounded-xl border p-4 text-left transition-all duration-150 disabled:cursor-default ${style}`}
                   >
                     <span
-                      className={`mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-lg text-[11px] font-bold ${
-                        answered && isCorrect
+                      className={`mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-lg text-[11px] font-bold ${answered && isCorrect
                           ? "bg-emerald-400 text-zinc-950"
                           : answered && isChosen
                             ? "bg-rose-400 text-zinc-950"
                             : "bg-white/10 text-white/70"
-                      }`}
+                        }`}
                     >
                       {LETTERS[i]}
                     </span>
@@ -340,14 +338,12 @@ function Simulador() {
             </div>
 
             {answered && (
-              <div className={`mt-5 rounded-xl border p-4 ${
-                chosen === q.answer
+              <div className={`mt-5 rounded-xl border p-4 ${chosen === q.answer
                   ? "border-emerald-500/30 bg-emerald-500/10"
                   : "border-rose-500/30 bg-rose-500/10"
-              }`}>
-                <p className={`text-sm font-bold ${
-                  chosen === q.answer ? "text-emerald-300" : "text-rose-300"
                 }`}>
+                <p className={`text-sm font-bold ${chosen === q.answer ? "text-emerald-300" : "text-rose-300"
+                  }`}>
                   {chosen === q.answer
                     ? "✓ Resposta correta!"
                     : `✗ Incorreta — a correta é ${LETTERS[q.answer]}.`}
@@ -437,11 +433,10 @@ function Simulador() {
             return (
               <div
                 key={q.id}
-                className={`rounded-xl border p-5 ${
-                  ok
+                className={`rounded-xl border p-5 ${ok
                     ? "border-emerald-500/30 bg-emerald-500/10"
                     : "border-rose-500/30 bg-rose-500/10"
-                }`}
+                  }`}
               >
                 <div className="flex items-center justify-between text-xs font-semibold">
                   <span className="text-white/60">Questão {i + 1}</span>
@@ -497,9 +492,8 @@ function ChoiceCard({
       variant="outline"
       aria-pressed={active}
       onClick={onClick}
-      className={`h-auto min-h-24 w-full flex-col items-start justify-center gap-0 whitespace-normal rounded-md border p-4 text-left transition-colors ${
-        active ? "border-primary bg-secondary" : "border-border bg-card hover:bg-secondary"
-      }`}
+      className={`h-auto min-h-24 w-full flex-col items-start justify-center gap-0 whitespace-normal rounded-md border p-4 text-left transition-colors ${active ? "border-primary bg-secondary" : "border-border bg-card hover:bg-secondary"
+        }`}
     >
       <p className="font-semibold">{title}</p>
       <p className="mt-1 text-sm text-muted-foreground">{subtitle}</p>
@@ -523,11 +517,10 @@ function DarkChoiceCard({
       type="button"
       aria-pressed={active}
       onClick={onClick}
-      className={`h-auto min-h-20 w-full rounded-xl border p-4 text-left transition-all duration-200 ${
-        active
+      className={`h-auto min-h-20 w-full rounded-xl border p-4 text-left transition-all duration-200 ${active
           ? "border-white/50 bg-white/15 shadow-md"
           : "border-white/10 bg-white/5 hover:border-white/25 hover:bg-white/10"
-      }`}
+        }`}
     >
       <p className="font-semibold text-white text-sm">{title}</p>
       <p className="mt-1 text-xs text-white/55">{subtitle}</p>

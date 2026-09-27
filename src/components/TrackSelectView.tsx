@@ -115,7 +115,7 @@ export function TrackSelectView({
               </p>
 
               <p className="mt-3 text-sm text-white/70 leading-relaxed">
-                Guia prático de exame neurológico à beira do leito. Roteiro semiológico dos <strong>12 pares de nervos cranianos</strong>,
+                Guia prático de exame neurológico. Roteiro semiológico dos <strong>12 pares de nervos cranianos</strong>,
                 passo a passo de semiotécnica, testes e resumo direto das principais alterações clínicas.
               </p>
             </div>

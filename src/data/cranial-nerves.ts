@@ -68,9 +68,9 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       },
     ],
     professorTips: [
-      "O bulbo não é o nervo: o bulbo olfatório na base do crânio é parte do SNC; o verdadeiro nervo são os filetes microscópicos que atravessam a lâmina crivosa.",
-      "Nunca use substâncias irritantes (como álcool ou amônia): elas estimulam terminações dolorosas do trigêmeo (NC V) e geram um falso teste de olfato.",
-      "Grande parte do 'paladar' percebido é olfato retrofaríngeo. Pacientes com lesão do NC I queixam-se tipicamente de perda do sabor dos alimentos.",
+      "Sempre iniciar pela narina doente antes da saudável.",
+      "Quando trocar pra narina comprometida, troque a substância.",
+      "Não utilize substâncias irritantes que podem estimular terminações dolorosas, gerando falsos-positivos.",
     ],
   },
   {
@@ -132,8 +132,8 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       },
     ],
     professorTips: [
-      "No quiasma óptico, apenas as fibras nasais da retina (que enxergam o campo lateral/temporal) cruzam a linha média.",
-      "A representação da mácula no córtex occipital possui dupla vascularização (ramos da ACP e ACM), permitindo a 'preservação macular' em infartos da ACP.",
+      "O nervo ótico está ligado à aferência do estímulo da luz, se diferenciando do oculomotor (eferência).",
+      "Tumores hipofisários estão diretamente ligados às quadrantopsias devido à compressão do quiasma óptico.",
     ],
   },
   {
@@ -198,10 +198,8 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       },
     ],
     professorTips: [
-      "Regra mnemônica: RL6, OS4, TO3 — Reto Lateral pelo VI; Oblíquo Superior pelo IV; Todos os outros músculos extrínsecos pelo III.",
-      "Fibras pupilares do NC III trafegam na periferia do nervo: compressões causam midríase; infartos microvasculares (diabetes) poupam a pupila.",
-      "O NC IV é o único que decussa completamente e emerge na face dorsal do mesencéfalo, sendo muito suscetível a TCE.",
-      "O NC VI tem o trajeto intracraniano mais longo — sua paralisia isolada em HIC é falso sinal localizatório (não significa lesão pontina).",
+      "Regra mnemônica: RL6OS4TO3 — Reto Lateral pelo VI; Oblíquo Superior pelo IV; Todos os outros músculos extrínsecos pelo III.",
+      "Lembre sempre de examinar a acomodação do cristalino (puxando o dedo pra frente e pra trás)",
     ],
     jointNote: "NC III (Oculomotor), NC IV (Troclear) e NC VI (Abducente)",
   },
@@ -232,7 +230,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       },
     ],
     professorTips: [
-      "É o único nervo que decussa completamente e emerge da face dorsal do mesencéfalo, sendo muito suscetível a TCE.",
+      "Lembre sempre de examinar a acomodação do cristalino (puxando o dedo pra frente e pra trás)",
     ],
     jointGroup: 3,
     jointNote: "NC III (Oculomotor), NC IV (Troclear) e NC VI (Abducente)",
@@ -283,8 +281,8 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       },
     ],
     professorTips: [
-      "Cuidado com falso negativo no córneo-palpebral: tocar na esclera branca não desencadeia o reflexo.",
-      "O reflexo mandibular/masseterino (percutir o queixo com boca aberta) deve ser mínimo ou ausente; se estiver exaltado (hiperreflexia), indica lesão bilateral do 1º neurônio motor.",
+      "Cuidado com falso negativo no córneo-palpebral: não toque na córnea para evitar resultados falsos.",
+      "O reflexo mandibular (percutir o queixo com boca aberta) deve ser mínimo e pode estar ausente; se estiver exaltado (hiperreflexia), indica lesão bilateral do 1º neurônio motor.",
     ],
   },
   {
@@ -314,8 +312,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       },
     ],
     professorTips: [
-      "Falso sinal localizatório: longo trajeto sobre a crista petrosa torna o NC VI o mais sensível a aumentos difusos da PIC.",
-      "Mnemônico: RL6, OS4, TO3.",
+      "Lembre sempre de examinar a acomodação do cristalino (puxando o dedo pra frente e pra trás).",
     ],
     jointGroup: 3,
     jointNote: "NC III (Oculomotor), NC IV (Troclear) e NC VI (Abducente)",
@@ -353,7 +350,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       },
     ],
     professorTips: [
-      "Regra prática de emergência: se o paciente NÃO consegue franzir a testa e NÃO fecha o olho daquele lado, trata-se de paralisia periférica (geralmente Paralisia de Bell), e não AVC clássico.",
+      "Se o paciente NÃO consegue franzir a testa e NÃO fecha o olho daquele lado, trata-se de paralisia periférica (geralmente Paralisia de Bell), e não AVC clássico.",
       "A paralisia do músculo estapédio pode gerar hiperacusia (sons comuns soam insuportavelmente altos no ouvido ipsilateral).",
     ],
   },
@@ -399,7 +396,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       },
     ],
     professorTips: [
-      "O reflexo vestíbulo-ocular (RVO) é crucial no protocolo de Morte Encefálica: ausência de desvio compensatório dos olhos ao girar a cabeça indica parada da função do tronco encefálico.",
+      "O teste de Rinne pode ser positivo e ainda sim estar alterado (em casos de assimetria ou quando a condução aérea é só um pouco maior do que a óssea)",
     ],
   },
   {
@@ -435,9 +432,9 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       {
         title: "3. Fonação e Deglutição",
         steps: [
-          "Pesquise rouquidão, voz bitonal ou soprosa (disfonia por paralisia de prega vocal — NC X).",
-          "Ofereça pequenos goles d'água: engasgo ou tosse imediata sugere incompetência laríngea (NC X).",
-          "Teste fonético: 'Ka-ka-ka' avalia o palato mole (NC X).",
+          "Pesquise rouquidão, voz bitonal ou soprosa.",
+          "Ofereça água: engasgo ou tosse imediata sugere incompetência laríngea.",
+          "Teste fonético: 'Ka-ka-ka' e sílabas repetidas avaliam o palato mole.",
         ],
       },
     ],
@@ -501,7 +498,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       },
     ],
     professorTips: [
-      "ALERTA: NUNCA force o reflexo nauseoso em pacientes com rebaixamento da consciência não intubados — alto risco de broncoaspiração.",
+      "Lembre sempre da questão de inervar apenas o terço posterior da língua",
     ],
     jointGroup: 9,
     jointNote: "NC IX (Glossofaríngeo) e NC X (Vago)",
@@ -539,8 +536,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       },
     ],
     professorTips: [
-      "Lembre-se da mecânica do SCM: a contração do músculo de um lado roda a face para o lado oposto.",
-      "Lesões isoladas do XI par ocorrem comumente em biópsias ganglionares ou dissecções do trígono cervical posterior.",
+      "Geralmente lesões isoladas nesse nervo são raras (um problema relacionado a ele pode indicar uma patologia mais grave).",
     ],
   },
   {
@@ -577,8 +573,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       },
     ],
     professorTips: [
-      "Regra prática: a língua sempre 'aponta para a lesão' na lesão periférica unilateral do hipoglosso.",
-      "Lesões do primeiro neurônio motor (corticonucleares/centrais) desviam a língua para o lado contralateral sem causar atrofia nem fasciculações.",
+      "Sempre avaliar a língua na boca primeiro e só depois pedir para puxar pra fora.",
     ],
   },
 ];
