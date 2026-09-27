@@ -327,15 +327,15 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       "Motor somático para os músculos da expressão facial e estapédio. Sensorial para o paladar dos 2/3 anteriores da língua (nervo corda do tímpano). Parassimpático para glândulas submandibulares, sublinguais e lacrimais.",
     semiotecnica: [
       {
-        title: "Avaliação dos 6 comandos da mímica",
+        title: "Avaliação dos comandos da mímica",
         steps: [
           "Inspeção em repouso: simetria das rimas labiais, sulco nasolabial e abertura das fendas palpebrais.",
-          "1. Enrugar a fronte e elevar as sobrancelhas.",
-          "2. Fechar os olhos com muita força contra a tentativa do examinador de abri-los.",
-          "3. Mostrar os dentes ou sorrir amplamente.",
-          "4. Encher as bochechas de ar (examinador comprime para testar bucinador).",
-          "5. Cerrar a mandíbula contraindo o platisma no pescoço.",
-          "6. Teste fonético labial: peça para repetir repetidamente a sílaba 'Pa-pa-pa'.",
+          "Enrugar a fronte e elevar as sobrancelhas.",
+          "Fechar os olhos com muita força contra a tentativa do examinador de abri-los.",
+          "Mostrar os dentes ou sorrir amplamente.",
+          "Encher as bochechas de ar (examinador comprime para testar bucinador).",
+          "Cerrar a mandíbula contraindo o platisma no pescoço.",
+          "Teste fonético labial: peça para repetir repetidamente a sílaba 'Pa-pa-pa'.",
         ],
       },
     ],
@@ -375,7 +375,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
         title: "2. Exame Vestibular",
         steps: [
           "Pesquisa de nistagmo espontâneo e induzido.",
-          "Manobra de Dix-Hallpike: decúbito dorsal súbito com cabeça rodada a 45º e pendente da maca (diagnóstico de VPPB).",
+          "Manobra de Dix-Hallpike: decúbito dorsal súbito com cabeça rodada a 45º e pendente da maca (diagnóstico de VPPB). Pesquisa nistagmo.",
           "Teste de Romberg: em pé, pés juntos, de olhos abertos e depois fechados (pesquisa desvio/queda ipsilateral).",
           "Reflexo Vestíbulo-Ocular (RVO): manobra dos 'olhos de boneca' rodando rapidamente a cabeça com olhar fixado.",
         ],
@@ -418,7 +418,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
         title: "1. Inspeção do Palato e Úvula",
         steps: [
           "Solicite que o paciente abra a boca e emita um 'Ahhh' sustentado.",
-          "Observe a elevação simétrica do véu palatino. Desvio da úvula para o lado saudável indica lesão unilateral do NC X (Sinal da Cortina).",
+          "Observe a elevação simétrica do véu palatino e se a úvula está aparente.",
         ],
       },
       {
