@@ -228,8 +228,8 @@ function Simulador() {
                     aria-pressed={active}
                     onClick={() => toggleLevel(level)}
                     className={`rounded-full px-4 py-1.5 text-sm font-medium transition-all ${active
-                        ? "bg-white text-zinc-950 shadow-md"
-                        : "border border-white/15 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
+                      ? "bg-white text-zinc-950 shadow-md"
+                      : "border border-white/15 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
                       }`}
                   >
                     {DIFFICULTY_LABEL[level]} ({counts[level]})
@@ -323,10 +323,10 @@ function Simulador() {
                   >
                     <span
                       className={`mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-lg text-[11px] font-bold ${answered && isCorrect
-                          ? "bg-emerald-400 text-zinc-950"
-                          : answered && isChosen
-                            ? "bg-rose-400 text-zinc-950"
-                            : "bg-white/10 text-white/70"
+                        ? "bg-emerald-400 text-zinc-950"
+                        : answered && isChosen
+                          ? "bg-rose-400 text-zinc-950"
+                          : "bg-white/10 text-white/70"
                         }`}
                     >
                       {LETTERS[i]}
@@ -339,8 +339,8 @@ function Simulador() {
 
             {answered && (
               <div className={`mt-5 rounded-xl border p-4 ${chosen === q.answer
-                  ? "border-emerald-500/30 bg-emerald-500/10"
-                  : "border-rose-500/30 bg-rose-500/10"
+                ? "border-emerald-500/30 bg-emerald-500/10"
+                : "border-rose-500/30 bg-rose-500/10"
                 }`}>
                 <p className={`text-sm font-bold ${chosen === q.answer ? "text-emerald-300" : "text-rose-300"
                   }`}>
@@ -404,7 +404,7 @@ function Simulador() {
             onClick={start}
             className="rounded-full bg-white px-7 py-2.5 text-sm font-semibold text-zinc-950 shadow-lg backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/90"
           >
-            Nova prova
+            Nova prova (mesmo assunto)
           </button>
           <button
             type="button"
@@ -434,8 +434,8 @@ function Simulador() {
               <div
                 key={q.id}
                 className={`rounded-xl border p-5 ${ok
-                    ? "border-emerald-500/30 bg-emerald-500/10"
-                    : "border-rose-500/30 bg-rose-500/10"
+                  ? "border-emerald-500/30 bg-emerald-500/10"
+                  : "border-rose-500/30 bg-rose-500/10"
                   }`}
               >
                 <div className="flex items-center justify-between text-xs font-semibold">
@@ -518,8 +518,8 @@ function DarkChoiceCard({
       aria-pressed={active}
       onClick={onClick}
       className={`h-auto min-h-20 w-full rounded-xl border p-4 text-left transition-all duration-200 ${active
-          ? "border-white/50 bg-white/15 shadow-md"
-          : "border-white/10 bg-white/5 hover:border-white/25 hover:bg-white/10"
+        ? "border-white/50 bg-white/15 shadow-md"
+        : "border-white/10 bg-white/5 hover:border-white/25 hover:bg-white/10"
         }`}
     >
       <p className="font-semibold text-white text-sm">{title}</p>
