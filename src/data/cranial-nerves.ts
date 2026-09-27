@@ -133,7 +133,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
     ],
     professorTips: [
       "O nervo ótico está ligado à aferência do estímulo da luz, se diferenciando do oculomotor (eferência).",
-      "Tumores hipofisários estão diretamente ligados às quadrantopsias devido à compressão do quiasma óptico.",
+      "Tumores hipofisários estão diretamente ligados as hemianopsias bitemporais devido à compressão do quiasma óptico.",
     ],
   },
   {
