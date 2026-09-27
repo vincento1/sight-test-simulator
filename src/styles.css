@@ -78,7 +78,9 @@
   --wine: oklch(0.26 0.09 22);
   --wine-deep: oklch(0.17 0.06 20);
   --wine-glow: oklch(0.42 0.15 18);
-  --gradient-hero: radial-gradient(ellipse 80% 60% at 50% 35%, oklch(0.36 0.13 20) 0%, transparent 70%), linear-gradient(160deg, oklch(0.24 0.09 22) 0%, oklch(0.15 0.05 18) 100%);
+  --gradient-hero:
+    radial-gradient(ellipse 80% 60% at 50% 35%, oklch(0.36 0.13 20) 0%, transparent 70%),
+    linear-gradient(160deg, oklch(0.24 0.09 22) 0%, oklch(0.15 0.05 18) 100%);
   --background: oklch(0.975 0.006 20);
   --foreground: oklch(0.2 0.05 20);
   --surface: oklch(0.955 0.012 20);

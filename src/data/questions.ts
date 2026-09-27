@@ -34,7 +34,7 @@ const visualQuestions: Question[] = [
       "O bulbo ocular é revestido por três túnicas concêntricas. A túnica fibrosa, constituída pela camada mais externa e protetora do olho, é formada anatomicamente por:",
     options: [
       "Coroide nos 5/6 posteriores e retina no 1/6 anterior.",
-      "Esclera nos 5/6 posteriores opacos e córnea no 1/6 anterior transparente.",
+      "Esclera nos 5/6 posteriores e córnea no 1/6 anterior.",
       "Corpo ciliar, íris e processo ciliar na porção anterior.",
       "Retina óptica posteriormente e ora serrata na transição anterior.",
       "Túnica úvea posteriormente e cristalino na porção central.",
@@ -102,7 +102,7 @@ const visualQuestions: Question[] = [
       "O cristalino (lente) é uma estrutura biconvexa, transparente e elástica. Ele é mantido em sua posição por meio de:",
     options: [
       "Ligamento suspensor da pálpebra e tarso superior.",
-      "Fibras zonulares (zônula ciliar ou ligamento suspensor da lente) ligadas ao corpo ciliar.",
+      "Fibras da zônula ciliar conectadas ao corpo ciliar.",
       "Trabéculas esclerais e canal de Schlemm.",
       "Bainha dural do nervo óptico.",
       "Ramos ciliares da artéria oftálmica.",
@@ -119,7 +119,7 @@ const visualQuestions: Question[] = [
       "Durante o mecanismo de acomodação para a visão de perto, o sistema nervoso parassimpático (via NC III) promove:",
     options: [
       "Relaxamento do músculo ciliar, aumento da tensão na zônula ciliar e aplanamento do cristalino.",
-      "Contração do músculo ciliar, o que afrouxa a zônula ciliar e permite que o cristalino se torne mais esférico/convexo.",
+      "Contração do músculo ciliar, afrouxamento da zônula e maior convexidade do cristalino.",
       "Contração do músculo dilatador da pupila para aumentar a entrada de luz focalizada.",
       "Paralisia da zônula ciliar, provocando o deslocamento do cristalino para a câmara anterior.",
       "Aumento do diâmetro corneano para ampliação do campo visual periférico.",
@@ -136,7 +136,7 @@ const visualQuestions: Question[] = [
       "O humor aquoso preenche as câmaras anterior e posterior do olho. Quanto à sua produção, circulação e drenagem, assinale a opção correta:",
     options: [
       "É secretado pelas células da córnea e drena diretamente para as veias da coroide.",
-      "É produzido pelos processos ciliares na câmara posterior, passa pela pupila para a câmara anterior e drena no seno venoso da esclera (canal de Schlemm).",
+      "É produzido nos processos ciliares, passa pela pupila e drena no canal de Schlemm.",
       "É sintetizado no corpo vítreo e absorvido exclusivamente pelo disco do nervo óptico.",
       "Drena pela fissura orbital superior diretamente para o seio cavernoso.",
       "É reabsorvido pelas glândulas lacrimais no ângulo iridocorneano.",
@@ -160,11 +160,10 @@ const visualQuestions: Question[] = [
     id: 9,
     subject: "visual",
     difficulty: "media",
-    statement:
-      "A fovea central destaca-se por ser a região de máxima acuidade visual porque:",
+    statement: "A fovea central destaca-se por ser a região de máxima acuidade visual porque:",
     options: [
       "Contém exclusivamente bastonetes altamente concentrados e vascularização abundante.",
-      "Apresenta apenas cones e possui as camadas internas da retina deslocadas lateralmente, permitindo acesso direto da luz.",
+      "Concentra apenas cones e possui desvio lateral das camadas internas da retina.",
       "É o ponto onde os axônios das células ganglionares perfuram a esclera para formar o nervo óptico.",
       "É desprovida de pigmentação e recoberta por uma camada espessa de humor vítreo.",
       "Não depende da circulação da coroide, sendo nutrida pela artéria central da retina.",
@@ -177,10 +176,9 @@ const visualQuestions: Question[] = [
     id: 10,
     subject: "visual",
     difficulty: "facil",
-    statement:
-      "O disco do nervo óptico (papila óptica) é considerado um 'ponto cego' porque:",
+    statement: "O disco do nervo óptico (papila óptica) é considerado um 'ponto cego' porque:",
     options: [
-      "É desprovido de fotorreceptores (cones e bastonetes), pois é o local de saída dos axônios das células ganglionares.",
+      "Não contém fotorreceptores, sendo o ponto de saída dos axônios das células ganglionares.",
       "É coberto por uma camada opaca de melanina produzida pela coroide.",
       "É o local onde a artéria central da retina se eferentiza na cavidade vítrea sem fazer sinapses.",
       "Contém apenas bastonetes não funcionais sob luz diurna.",
@@ -194,8 +192,7 @@ const visualQuestions: Question[] = [
     id: 11,
     subject: "visual",
     difficulty: "facil",
-    statement:
-      "Sobre as diferenças entre cones e bastonetes, assinale a afirmativa correta:",
+    statement: "Sobre as diferenças entre cones e bastonetes, assinale a afirmativa correta:",
     options: [
       "Os bastonetes são responsáveis pela visão em cores (fotópica) e possuem baixa sensibilidade à luz.",
       "Os cones são altamente sensíveis à luz fraca, sendo essenciais para a visão noturna (escotópica).",
@@ -245,12 +242,11 @@ const visualQuestions: Question[] = [
     id: 14,
     subject: "visual",
     difficulty: "media",
-    statement:
-      "De acordo com a regra mnemônica RL6OS4TO3, o nervo oculomotor (NC III) inerva:",
+    statement: "De acordo com a regra mnemônica RL6OS4TO3, o nervo oculomotor (NC III) inerva:",
     options: [
       "Apenas o reto lateral e o oblíquo superior.",
       "Todos os músculos extrínsecos da órbita, sem exceção.",
-      "Reto superior, reto inferior, reto medial, oblíquo inferior e levantador da pálpebra superior.",
+      "Retos superior, inferior e medial, oblíquo inferior e levantador da pálpebra.",
       "Somente os músculos oblíquos superior e inferior.",
       "Apenas os músculos motores intrínsecos do bulbo ocular.",
     ],
@@ -312,8 +308,7 @@ const visualQuestions: Question[] = [
     id: 18,
     subject: "visual",
     difficulty: "media",
-    statement:
-      "Qual das seguintes estruturas NÃO atravessa a fissura orbital superior?",
+    statement: "Qual das seguintes estruturas NÃO atravessa a fissura orbital superior?",
     options: [
       "Nervo Oculomotor (NC III).",
       "Nervo Troclear (NC IV).",
@@ -329,8 +324,7 @@ const visualQuestions: Question[] = [
     id: 19,
     subject: "visual",
     difficulty: "facil",
-    statement:
-      "A artéria oftálmica origina-se como o primeiro ramo intracraniano da:",
+    statement: "A artéria oftálmica origina-se como o primeiro ramo intracraniano da:",
     options: [
       "Artéria Carótida Externa.",
       "Artéria Carótida Interna.",
@@ -346,11 +340,10 @@ const visualQuestions: Question[] = [
     id: 20,
     subject: "visual",
     difficulty: "dificil",
-    statement:
-      "O trajeto anatômico peculiar da artéria central da retina caracteriza-se por:",
+    statement: "O trajeto anatômico peculiar da artéria central da retina caracteriza-se por:",
     options: [
       "Perfurar a esclera anteriormente próximo ao limbo córneo-escleral.",
-      "Penetrar na face inferior do nervo óptico (a cerca de 13 mm do bulbo) e correr em seu centro até o disco óptico.",
+      "Penetrar na face inferior do nervo óptico e correr em seu centro até a papila.",
       "Acompanhar o nervo nasociliar pela fissura orbital inferior.",
       "Irrigar exclusivamente a coroide sem emitir ramos para as camadas internas da retina.",
       "Fazer anastomose direta com a artéria facial no ângulo medial do olho.",
@@ -451,7 +444,7 @@ const visualQuestions: Question[] = [
     options: [
       "A miose é promovida pelo sistema simpático via nervos ciliares longos.",
       "A midríase é mediada pelo sistema parassimpático (NC III) atuando no músculo ciliar.",
-      "A miose é um reflexo parassimpático que contrai o músculo esfíncter da pupila; a midríase é simpática e contrai o músculo dilatador da pupila.",
+      "A miose é parassimpática (esfíncter pupilar) e a midríase é simpática (dilatador pupilar).",
       "A dilatação pupilar é causada pela contração do esfíncter induzida pela noradrenalina.",
       "A constricção pupilar depende da inervação motora somática do nervo abducente (NC VI).",
     ],
@@ -483,7 +476,7 @@ const visualQuestions: Question[] = [
       "A estrutura do mesencéfalo responsável pela integração bilateral da resposta pupilar consensual é o:",
     options: [
       "Núcleo grácil e cuneiforme.",
-      "Núcleo pré-tectal (área pré-tectal) que envia fibras bilaterais aos Núcleos de Edinger-Westphal.",
+      "Núcleo pré-tectal (área pré-tectal).",
       "Colículo inferior na ponte posterior.",
       "Corpo geniculado medial do tálamo.",
       "Núcleo motor do nervo trigêmeo.",
@@ -496,11 +489,10 @@ const visualQuestions: Question[] = [
     id: 29,
     subject: "visual",
     difficulty: "media",
-    statement:
-      "As vias aferente e eferente do reflexo córneo-palpebral são, respectivamente:",
+    statement: "As vias aferente e eferente do reflexo córneo-palpebral são, respectivamente:",
     options: [
       "Aferência: NC II; Eferência: NC III.",
-      "Aferência: NC V1 (nervo nasociliar); Eferência: NC VII (nervo facial).",
+      "Aferência: NC V1; Eferência: NC VII.",
       "Aferência: NC V2; Eferência: NC V3.",
       "Aferência: NC III; Eferência: NC VI.",
       "Aferência: NC VII; Eferência: NC V1.",
@@ -516,7 +508,7 @@ const visualQuestions: Question[] = [
     statement: "A tríade de eventos da resposta de acomodação para visão de perto é:",
     options: [
       "Aplanamento da lente, midríase pupilar e divergência ocular.",
-      "Contração do músculo ciliar (aumento da convexidade do cristalino), constricção pupilar (miose) e convergência dos eixos oculares.",
+      "Contração do músculo ciliar, constricção pupilar (miose) e convergência dos eixos oculares.",
       "Relaxamento do músculo ciliar, constricção pupilar e rotação externa do olho.",
       "Extensão da pálpebra, dilatação pupilar e paralisia dos fotorreceptores.",
       "Elevação da pressão intraocular, miose e abdução bilateral dos olhos.",
@@ -529,8 +521,7 @@ const visualQuestions: Question[] = [
     id: 31,
     subject: "visual",
     difficulty: "facil",
-    statement:
-      "Os axônios que formam o nervo óptico derivam de qual camada de células retinianas?",
+    statement: "Os axônios que formam o nervo óptico derivam de qual camada de células retinianas?",
     options: [
       "Células fotorreceptoras (cones e bastonetes).",
       "Células bipolares da camada nuclear interna.",
@@ -550,7 +541,7 @@ const visualQuestions: Question[] = [
       "Sendo um trato do SNC, o nervo óptico é envolvido pelas três meninges e revestido por:",
     options: [
       "Células de Schwann.",
-      "Oligodendrócitos no SNC e banhado por líquido cefalorraquidiano (LCR) no espaço subaracnóideo.",
+      "Oligodendrócitos e banhado por líquor no espaço subaracnóideo.",
       "Bainha de Henle contínua com a esclera sem LCR.",
       "Células ependimárias das câmaras oculares.",
       "Perineuro derivado da fáscia de Tenon.",
@@ -563,8 +554,7 @@ const visualQuestions: Question[] = [
     id: 33,
     subject: "visual",
     difficulty: "dificil",
-    statement:
-      "A luz proveniente do campo visual temporal esquerdo incide sobre a:",
+    statement: "A luz proveniente do campo visual temporal esquerdo incide sobre a:",
     options: [
       "Retina temporal do olho esquerdo.",
       "Retina nasal do olho esquerdo.",
@@ -600,7 +590,7 @@ const visualQuestions: Question[] = [
       "Cada trato óptico (por exemplo, o direito) contém fibras que carregam a informação de qual hemicampo visual?",
     options: [
       "Do campo visual total direito (visão monocular direita).",
-      "Do hemicampo visual esquerdo (retina temporal direita + retina nasal esquerda).",
+      "Do hemicampo visual esquerdo contralateral.",
       "Dos dois campos visuais temporais (visão bitemporal).",
       "Exclusivamente dos fotorreceptores da fovea central de ambos os olhos.",
       "Do hemicampo visual superior ipsilateral.",
@@ -679,8 +669,7 @@ const visualQuestions: Question[] = [
     id: 40,
     subject: "visual",
     difficulty: "media",
-    statement:
-      "Macroadenoma hipofisário comprimindo a região mediana do quiasma óptico causa:",
+    statement: "Macroadenoma hipofisário comprimindo a região mediana do quiasma óptico causa:",
     options: [
       "Hemianopsia homônima direita.",
       "Hemianopsia bitemporal (perda dos campos temporais).",
@@ -696,8 +685,7 @@ const visualQuestions: Question[] = [
     id: 41,
     subject: "visual",
     difficulty: "dificil",
-    statement:
-      "Uma lesão destrutiva completa do Trato Óptico Direito causará:",
+    statement: "Uma lesão destrutiva completa do Trato Óptico Direito causará:",
     options: [
       "Hemianopsia homônima esquerda.",
       "Hemianopsia homônima direita.",
@@ -734,7 +722,7 @@ const visualQuestions: Question[] = [
       "A explicação anatômica da 'preservação macular' em infarto occipital por oclusão da artéria cerebral posterior é:",
     options: [
       "A fóvea é representada no corpo geniculado medial e não no córtex occipital.",
-      "A região occipital posterior correspondente à mácula possui dupla irrigação (ramos da A. cerebral posterior e A. cerebral média).",
+      "Dupla irrigação da área macular por ramos da cerebral posterior e cerebral média.",
       "A visão macular é conduzida exclusivamente pelo nervo trigêmeo.",
       "Os fotorreceptores da mácula não realizam decussação no quiasma óptico.",
       "A mácula drena diretamente para o seio sagital superior.",
@@ -749,7 +737,7 @@ const visualQuestions: Question[] = [
     difficulty: "media",
     statement: "A tríade clássica da Síndrome de Horner no olho afetado é:",
     options: [
-      "Ptose palpebral leve (músculo tarsal), miose (pupila contraída) e anidrose facial.",
+      "Ptose palpebral leve, miose e anidrose facial.",
       "Exoftalmia, midríase paralítica e estrabismo divergente.",
       "Lagoftalmo, miose e hiperemia conjuntival.",
       "Midríase, ptose severa e nistagmo.",
@@ -783,7 +771,7 @@ const visualQuestions: Question[] = [
     statement:
       "Diferente dos outros músculos extrínsecos, o músculo oblíquo inferior origina-se na:",
     options: [
-      "Porção anterior do assoalho da órbita (assoalho maxilar, lateral ao sulco nasolacrimal).",
+      "Porção anterior do assoalho da órbita (osso maxilar).",
       "Asa menor do osso esfenoide no ápice da órbita.",
       "Crista lacrimal posterior do osso etmoide.",
       "Tróclea do osso frontal.",
@@ -797,8 +785,7 @@ const visualQuestions: Question[] = [
     id: 47,
     subject: "visual",
     difficulty: "facil",
-    statement:
-      "O líquido lacrimal drena do fórnice conjuntival até a cavidade nasal através do:",
+    statement: "O líquido lacrimal drena do fórnice conjuntival até a cavidade nasal através do:",
     options: [
       "Canal óptico.",
       "Ducto nasolacrimal, que desemboca no meato nasal inferior.",
@@ -834,7 +821,7 @@ const visualQuestions: Question[] = [
     statement: "Entre as funções vitais do epitélio pigmentado da retina (EPR) destaca-se:",
     options: [
       "Produção do humor vítreo e secreção de imunoglobulinas na câmara anterior.",
-      "Absorção da luz dispersa (evitando reflexões internas) e fagocitose dos discos dos fotorreceptores.",
+      "Absorção da luz dispersa e fagocitose dos discos dos fotorreceptores.",
       "Condução de potenciais de ação até o quiasma óptico.",
       "Inervação motora dos processos ciliares para alteração do foco.",
       "Filtração mecânica do humor aquoso no canal de Schlemm.",
@@ -847,10 +834,9 @@ const visualQuestions: Question[] = [
     id: 50,
     subject: "visual",
     difficulty: "media",
-    statement:
-      "A sequência correta das estruturas percorridas pelo impulso nervoso visual é:",
+    statement: "A sequência correta das estruturas percorridas pelo impulso nervoso visual é:",
     options: [
-      "Fotorreceptores → Células bipolares → Células ganglionares → Nervo óptico → Quiasma óptico → Trato óptico → CGL → Radiações ópticas → Córtex V1.",
+      "Fotorreceptores → Células bipolares → Ganglionares → Nervo óptico → Trato óptico → CGL → Córtex V1.",
       "Células ganglionares → Fotorreceptores → Células bipolares → Trato óptico → Quiasma → CGL → Córtex V1.",
       "Córnea → Cristalino → Nervo óptico → Corpo Geniculado Medial → Córtex temporal.",
       "Fotorreceptores → Nervo óptico → Colículo inferior → CGL → Radiações ópticas → Córtex frontal.",
