@@ -33,8 +33,8 @@ export function HabilidadesMenuView({ onBack, onSelectNervosCranianos }: Habilid
     },
     {
       id: "meningeos",
-      title: "Sinais Meníngeos e Avaliação do Coma",
-      subtitle: "Rigidez de nuca, sinais de Kernig e Brudzinski, Escala de Coma de Glasgow e reflexos de tronco encefálico.",
+      title: "Simulador de Mini-Osce",
+      subtitle: "Exame final abordando todos os assuntos ministrados em aula",
       icon: ShieldAlert,
       available: false,
     },
@@ -66,7 +66,7 @@ export function HabilidadesMenuView({ onBack, onSelectNervosCranianos }: Habilid
             Habilidades Clínicas (Neuro)
           </h1>
           <p className="mt-2 text-sm text-white/70 sm:text-base leading-relaxed">
-            Selecione o módulo prático de semiologia para estudar o passo a passo à beira do leito e
+            Selecione o módulo prático de semiologia para estudar o passo a passo e
             os principais achados clínicos.
           </p>
         </header>

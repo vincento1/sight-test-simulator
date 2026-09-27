@@ -367,7 +367,7 @@ export const CRANIAL_NERVES: CranialNerve[] = [
       "Sensitiva especial dupla. Ramo coclear: transmite as vibrações sonoras transduzidas no órgão de Corti. Ramo vestibular: detecta acelerações lineares e angulares dos canais semicirculares, sáculo e utrículo.",
     semiotecnica: [
       {
-        title: "1. Audiometria Clínica à Beira do Leito",
+        title: "1. Audiometria Clínica",
         steps: [
           "Fricção de dedos: atrito sutil das polpas digitais a 5-10 cm de cada orelha para triagem rápida.",
           "Teste de Weber: diapasão vibrando no centro do crânio (vértex). Normal: som no meio. Condução: lateraliza para o lado acometido. Neurossensorial: lateraliza para o lado saudável.",
