@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
 });
 
 const LETTERS = ["A", "B", "C", "D", "E"];
-const QUIZ_SIZE = 20;
+const QUIZ_SIZES = [20, 30, 50, 100] as const;
 
 const DIFFICULTIES: Difficulty[] = ["facil", "media", "dificil"];
 type Subject = Question["subject"];
@@ -69,6 +69,7 @@ function Simulador() {
   const [screen, setScreen] = useState<Screen>("intro");
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [levels, setLevels] = useState<Difficulty[]>(DIFFICULTIES);
+  const [quizSize, setQuizSize] = useState<number>(20);
   const [quiz, setQuiz] = useState<Question[]>([]);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [current, setCurrent] = useState(0);
@@ -103,7 +104,7 @@ function Simulador() {
   }
 
   function start() {
-    setQuiz(shuffle(pool).slice(0, QUIZ_SIZE));
+    setQuiz(shuffle(pool).slice(0, Math.min(quizSize, pool.length)));
     setAnswers({});
     setCurrent(0);
     setScreen("quiz");
