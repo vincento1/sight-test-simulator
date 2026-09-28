@@ -35,7 +35,7 @@ export const Route = createFileRoute("/")({
 });
 
 const LETTERS = ["A", "B", "C", "D", "E"];
-const QUIZ_SIZE = 20;
+const QUIZ_SIZES = [20, 30, 50, 100] as const;
 
 const DIFFICULTIES: Difficulty[] = ["facil", "media", "dificil"];
 type Subject = Question["subject"];
@@ -69,6 +69,7 @@ function Simulador() {
   const [screen, setScreen] = useState<Screen>("intro");
   const [subjects, setSubjects] = useState<Subject[]>([]);
   const [levels, setLevels] = useState<Difficulty[]>(DIFFICULTIES);
+  const [quizSize, setQuizSize] = useState<number>(20);
   const [quiz, setQuiz] = useState<Question[]>([]);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [current, setCurrent] = useState(0);
@@ -103,7 +104,7 @@ function Simulador() {
   }
 
   function start() {
-    setQuiz(shuffle(pool).slice(0, QUIZ_SIZE));
+    setQuiz(shuffle(pool).slice(0, Math.min(quizSize, pool.length)));
     setAnswers({});
     setCurrent(0);
     setScreen("quiz");
@@ -192,8 +193,11 @@ function Simulador() {
             <h1 className="mt-2 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
               Monte sua prova
             </h1>
-            <p className="mt-2 text-sm text-white/70 leading-relaxed">
-              20 questões sorteadas do banco, com correção imediata e gabarito comentado.
+            <p className="mt-3 text-xl font-semibold text-white sm:text-2xl">
+              Prova com <span className="text-rose-300">{Math.min(quizSize, pool.length)} questões</span> sorteadas do banco
+            </p>
+            <p className="mt-1 text-sm text-white/70 leading-relaxed">
+              Correção imediata e gabarito comentado em todas as questões.
             </p>
           </header>
 
@@ -238,9 +242,33 @@ function Simulador() {
               })}
             </div>
 
+            <h2 className="mt-8 text-sm font-semibold uppercase tracking-wider text-white/80">Tamanho da prova</h2>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {QUIZ_SIZES.map((size) => {
+                const available = pool.length >= size;
+                const active = quizSize === size;
+                return (
+                  <button
+                    key={size}
+                    type="button"
+                    aria-pressed={active}
+                    disabled={!available}
+                    onClick={() => setQuizSize(size)}
+                    className={`rounded-full px-5 py-2 text-sm font-semibold transition-all ${active
+                      ? "bg-white text-zinc-950 shadow-md"
+                      : "border border-white/15 bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
+                      } disabled:opacity-30 disabled:pointer-events-none`}
+                  >
+                    {size} questões
+                  </button>
+                );
+              })}
+            </div>
+
             <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-sm text-white/50">
-                {pool.length} questões no sorteio · prova com {Math.min(QUIZ_SIZE, pool.length)} questões
+              <p className="text-base font-medium text-white/80">
+                <span className="text-white">{pool.length} questões</span> no sorteio · prova com{" "}
+                <span className="text-rose-300 font-semibold">{Math.min(quizSize, pool.length)} questões</span>
               </p>
               <button
                 type="button"
