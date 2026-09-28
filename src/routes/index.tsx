@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -90,6 +90,14 @@ function Simulador() {
     }
     return c;
   }, [subjects]);
+
+  // Se o sorteio disponível ficar menor que o tamanho escolhido,
+  // volta automaticamente para o maior tamanho ainda possível.
+  useEffect(() => {
+    if (pool.length >= quizSize) return;
+    const valid = [...QUIZ_SIZES].reverse().find((size) => size <= pool.length);
+    if (valid) setQuizSize(valid);
+  }, [pool.length, quizSize]);
 
   function toggleSubject(subject: Subject) {
     setSubjects((prev) =>
