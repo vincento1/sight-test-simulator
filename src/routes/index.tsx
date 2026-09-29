@@ -19,13 +19,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "MedQuest: Simulador de 250 questões de Morfofuncional e Guia Semiológico Prático dos 12 Pares de Nervos Cranianos.",
+          "MedQuest: Simulador de 300 questões de Morfofuncional e Guia Semiológico Prático dos 12 Pares de Nervos Cranianos.",
       },
       { property: "og:title", content: "MedQuest | Morfofuncional e Habilidades Clínicas" },
       {
         property: "og:description",
         content:
-          "MedQuest: Simulador de 250 questões de Morfofuncional e Guia Semiológico Prático dos 12 Pares de Nervos Cranianos.",
+          "MedQuest: Simulador de 300 questões de Morfofuncional e Guia Semiológico Prático dos 12 Pares de Nervos Cranianos.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -137,7 +137,7 @@ function Simulador() {
           </p>
           <div className="mt-8 h-px w-24 bg-primary-foreground/30" />
           <p className="mt-8 max-w-xl text-base font-light leading-relaxed text-primary-foreground/80 sm:text-lg">
-            Plataforma para ajudar nos estudos: simulado de 250 questões de Morfofuncional com gabarito comentado
+            Plataforma para ajudar nos estudos: simulado de 300 questões de Morfofuncional com gabarito comentado
             e módulo de revisão para Habilidades Clínicas (Neurologia & Nervos Cranianos).
           </p>
           <Button
