@@ -4,7 +4,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 51,
     subject: "somato",
-    difficulty: "media",
+    difficulty: "facil",
     statement:
       "Os mecanorreceptores da pele diferem quanto à profundidade em que se encontram no tecido cutâneo e sua morfologia. Sobre a localização e classificação histológica dos receptores cutâneos, assinale a alternativa correta:",
     options: [
@@ -106,7 +106,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 57,
     subject: "somato",
-    difficulty: "media",
+    difficulty: "facil",
     statement:
       "Os axônios aferentes primários condutores da informação sensorial do corpo até a medula espinhal apresentam diâmetros e graus de mielinização variados. Assinale a alternativa correta em relação à velocidade de condução:",
     options: [
@@ -167,7 +167,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 61,
     subject: "somato",
-    difficulty: "media",
+    difficulty: "facil",
     statement:
       "A reativação do vírus Varicella-Zoster (causador do cobreiro) nos gânglios sensitivos provoca dor intensa e lesões vesiculares cutâneas. A distribuição característica dessas lesões na pele é explicada por:",
     options: [
@@ -218,7 +218,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 64,
     subject: "somato",
-    difficulty: "media",
+    difficulty: "facil",
     statement:
       "Na via Coluna Dorsal-Lemnisco Medial, o corpo celular do neurônio sensorial primário (1ª ordem) está localizado no:",
     options: [
@@ -235,7 +235,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 65,
     subject: "somato",
-    difficulty: "media",
+    difficulty: "facil",
     statement:
       "Os axônios dos aferentes primários da via da coluna dorsal fazem sua primeira sinapse com os neurônios de 2ª ordem localizados nos:",
     options: [
@@ -269,7 +269,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 67,
     subject: "somato",
-    difficulty: "media",
+    difficulty: "facil",
     statement:
       "À medida que ascende pelo tronco encefálico (bulbo, ponte e mesencéfalo), o Lemnisco Medial conduz informações de:",
     options: [
@@ -337,7 +337,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 71,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "media",
     statement:
       "Estudos fisiológicos revelaram que as subáreas de S1 processam aspectos distintos da informação somática. A área de Brodmann considerada o 'córtex somatossensorial primário propriamente dito' por receber a maior densidade de projeções do VPL e responder fortemente a estímulos táteis é a:",
     options: ["Área 3a.", "Área 3b.", "Área 1.", "Área 2.", "Área 5."],
@@ -365,7 +365,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 73,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "media",
     statement:
       "A organização funcional do córtex somatossensorial primário é caracterizada por colunas verticais de neurônios que se estendem através das camadas corticais. Essa descoberta fundamental é atribuída a:",
     options: [
@@ -399,7 +399,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 75,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "media",
     statement:
       "Um paciente sofreu uma lesão vascular circunscrita no córtex parietal de associação. Ele consegue sentir o toque em sua mão direita, mas é completamente incapaz de reconhecer um objeto (como uma chave ou moeda) colocado nessa mão com os olhos fechados. Essa condição clínica é chamada de:",
     options: [
@@ -495,7 +495,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 81,
     subject: "somato",
-    difficulty: "media",
+    difficulty: "facil",
     statement:
       "Diferente da via da coluna dorsal-lemnisco medial, os axônios dos neurônios de 2ª ordem da via espinotalâmica lateral (que conduz dor e temperatura) decussam:",
     options: [
@@ -546,7 +546,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 84,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "facil",
     statement:
       "A dor referida é o fenômeno pelo qual a ativação de nociceptores viscerais é percebida como se originasse na superfície cutânea. Esse fenômeno ocorre devido a:",
     options: [
@@ -563,7 +563,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 85,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "media",
     statement:
       "Um paciente com isquemia miocárdica (angina de peito) refere dor na região retroesternal que se irradia para a face interna do membro superior esquerdo. Essa localização da dor no braço esquerdo corresponde aos dermátomos:",
     options: ["C2 a C4.", "T1 a T4.", "L2 a L4.", "S1 a S3.", "C1 a C2."],
@@ -591,7 +591,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 87,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "media",
     statement:
       "A Teoria das Comportas (Gate Control Theory) propõe que a sensação de dor pode ser reduzida pela ativação simultânea de mecanorreceptores não nociceptivos. O mecanismo fisiológico por trás desse fenômeno (como friccionar a pele após uma pancada) envolve:",
     options: [
@@ -608,7 +608,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 88,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "media",
     statement:
       "O sistema nervoso central possui um circuito descendente capaz de suprimir a transmissão do sinal doloroso na medula. Uma estrutura mesencefálica chave nesse controle analgésico é a:",
     options: [
@@ -625,7 +625,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 89,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "media",
     statement:
       "A Substância Cinzenta Periaquedutal (PAG) envia axônios descendentes para os Núcleos da Rafe localizados no bulbo. Os neurônios dos núcleos da rafe projetam para o corno dorsal da medula espinhal utilizando o neurotransmissor:",
     options: ["Dopamina.", "Serotonina.", "Acetilcolina.", "Histamina.", "Aspartato."],
@@ -653,7 +653,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 91,
     subject: "somato",
-    difficulty: "facil",
+    difficulty: "media",
     statement:
       "A sensação de frio e calor é detectada por terminações nervosas livres portadoras de canais iônicos da família TRP (Transient Receptor Potential). Sobre a termorrecepção, é correto afirmar que:",
     options: [
@@ -721,7 +721,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 95,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "media",
     statement:
       "Um acidente vascular acometeu o funículo lateral esquerdo da medula espinhal no segmento T8, destruindo o Trato Espinotalâmico Lateral esquerdo. O achado clínico esperado é:",
     options: [
@@ -738,7 +738,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 96,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "media",
     statement:
       "Um infarto ponteiro focado destruiu o Lemnisco Medial Direito no terço médio da ponte. Quais os achados somatossensoriais esperados?",
     options: [
@@ -755,7 +755,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 97,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "media",
     statement:
       "Um paciente apresenta um acidente vascular cerebral isquêmico (AVC) no Núcleo VPL do tálamo esquerdo. A consequência somatossensorial direta será:",
     options: [
@@ -772,7 +772,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 98,
     subject: "somato",
-    difficulty: "media",
+    difficulty: "facil",
     statement:
       "A propriocepção inconsciente é essencial para o controle postural e coordenação motora fina em tempo real. As informações proprioceptivas inconscientes dos membros inferiores são levadas ao cerebelo pelos:",
     options: [
@@ -789,7 +789,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 99,
     subject: "somato",
-    difficulty: "media",
+    difficulty: "facil",
     statement:
       "O teste da discriminação de dois pontos avalia a capacidade de perceber dois estímulos táteis simultâneos e próximos como distintos. A distância mínima limiar para discriminar dois pontos é extremamente pequena na ponta dos dedos (~2 mm) e muito maior no dorso ou na coxa (~40 mm). Esse menor limiar na ponta dos dedos deve-se a:",
     options: [
@@ -806,7 +806,7 @@ export const somatoQuestions: Question[] = [
   {
     id: 100,
     subject: "somato",
-    difficulty: "dificil",
+    difficulty: "facil",
     statement:
       "Após uma lesão tecidual ou queimadura de sol, a área lesada torna-se extremamente sensível, e estímulos normalmente indolores passam a ser percebidos como dolorosos (alodinia) ou estímulos leves geram dor intensa (hiperalgesia). Esse fenômeno de sensibilização periférica é deflagrado por uma 'sopa inflamatória' contendo:",
     options: [
