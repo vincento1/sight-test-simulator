@@ -60,8 +60,8 @@ export function TrackSelectView({
                 <div className="flex size-14 items-center justify-center rounded-2xl bg-rose-500/30 text-rose-200 border border-rose-400/40 group-hover:scale-105 transition-transform">
                   <BookOpen className="size-7" />
                 </div>
-                <Badge variant="outline" className="border-white/20 bg-white/5 text-xs text-white/80">
-                  300 Questões
+                <Badge variant="outline" className="border-rose-400/40 bg-rose-500/20 text-xs font-semibold text-rose-200">
+                  <Sparkles className="size-3 mr-1" /> 300 Questões
                 </Badge>
               </div>
 

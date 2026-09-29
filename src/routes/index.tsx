@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronRight, BookOpen, Stethoscope } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   questions as bank,
@@ -127,26 +127,60 @@ function Simulador() {
 
   if (screen === "intro") {
     return (
-      <main className="relative flex min-h-screen items-center justify-center overflow-hidden bg-hero px-6 text-primary-foreground">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-foreground/30 to-transparent" />
-        <div className="pointer-events-none absolute -bottom-40 left-1/2 size-[36rem] -translate-x-1/2 rounded-full bg-wine-glow/30 blur-3xl" />
-        <div className="relative flex max-w-2xl flex-col items-center text-center">
-          <h1 className="text-7xl font-medium tracking-tight sm:text-8xl md:text-9xl">MedQuest</h1>
-          <p className="mt-2 text-lg font-light text-primary-foreground/85 sm:text-xl">
+      <main className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#2a0910] via-[#1a050a] to-[#110205] px-4 py-12 text-primary-foreground sm:px-6 lg:px-8">
+        {/* Ambient background glow effects identical to TrackSelectView & CranialNervesView */}
+        <div className="pointer-events-none fixed inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/2 h-[36rem] w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-rose-900/20 blur-[140px]" />
+          <div className="absolute bottom-10 right-1/4 h-[30rem] w-[30rem] rounded-full bg-rose-950/25 blur-[130px]" />
+        </div>
+
+        {/* Top subtle highlight border */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-rose-500/30 to-transparent" />
+
+        <div className="relative mx-auto flex w-full max-w-3xl flex-col items-center text-center">
+          {/* MedQuest Heading with degrade */}
+          <h1 className="text-7xl font-medium tracking-tight font-sans bg-gradient-to-b from-white via-rose-50 to-rose-200/80 bg-clip-text text-transparent drop-shadow-sm sm:text-8xl md:text-9xl">
+            MedQuest
+          </h1>
+
+          {/* Subtitle with matching pearly white degrade underneath MedQuest */}
+          <p className="mt-3 text-xl font-light tracking-wide bg-gradient-to-b from-white via-rose-50 to-rose-200/90 bg-clip-text text-transparent sm:text-2xl md:text-3xl">
             4º semestre — feito por Cezar
           </p>
-          <div className="mt-8 h-px w-24 bg-primary-foreground/30" />
-          <p className="mt-8 max-w-xl text-base font-light leading-relaxed text-primary-foreground/80 sm:text-lg">
-            Plataforma para ajudar nos estudos: simulado de 300 questões de Morfofuncional com gabarito comentado
-            e módulo de revisão para Habilidades Clínicas (Neurologia & Nervos Cranianos).
+
+          {/* Subtle gradient divider */}
+          <div className="mt-8 h-px w-24 bg-gradient-to-r from-transparent via-rose-400/40 to-transparent" />
+
+          {/* Description */}
+          <p className="mt-6 max-w-xl text-base font-light leading-relaxed text-white/75 sm:text-lg">
+            Plataforma para ajudar nos estudos: simulado de <strong className="font-semibold text-rose-200">300 questões</strong> de Morfofuncional com gabarito comentado
+            e módulo de revisão para <strong className="font-semibold text-rose-200">Habilidades Clínicas</strong> (Neurologia & Nervos Cranianos).
           </p>
-          <Button
-            type="button"
-            onClick={() => setScreen("track_select")}
-            className="mt-12 h-auto rounded-md bg-primary-foreground px-16 py-4 text-3xl font-medium text-wine shadow-2xl shadow-wine-deep/60 transition-transform hover:-translate-y-0.5 hover:bg-primary-foreground/90 sm:text-4xl cursor-pointer"
-          >
-            Iniciar
-          </Button>
+
+          {/* Feature chips */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <div className="flex items-center gap-2 rounded-xl border border-rose-400/20 bg-rose-950/30 px-4 py-2 text-xs sm:text-sm text-rose-200/90 backdrop-blur-md">
+              <BookOpen className="size-4 text-rose-400" />
+              <span>300 Questões Morfofuncional</span>
+            </div>
+            <div className="flex items-center gap-2 rounded-xl border border-rose-400/20 bg-rose-950/30 px-4 py-2 text-xs sm:text-sm text-rose-200/90 backdrop-blur-md">
+              <Stethoscope className="size-4 text-rose-400" />
+              <span>Semiologia dos Nervos Cranianos</span>
+            </div>
+          </div>
+
+          {/* Iniciar Button with glowing halo and degrade matching MedQuest title */}
+          <div className="relative mt-10 group">
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-white/30 via-rose-200/30 to-rose-400/25 opacity-40 blur-lg transition duration-500 group-hover:opacity-75" />
+            <Button
+              type="button"
+              onClick={() => setScreen("track_select")}
+              className="relative h-auto rounded-full border border-white/80 bg-gradient-to-b from-white via-rose-50 to-rose-200/90 px-14 py-4 text-2xl font-bold text-[#1a050a] shadow-2xl shadow-black/40 transition-all duration-300 hover:scale-105 hover:from-white hover:via-white hover:to-rose-100 hover:border-white hover:shadow-rose-900/40 active:scale-95 cursor-pointer sm:text-3xl"
+            >
+              <span>Iniciar</span>
+              <ChevronRight className="size-7 text-[#1a050a] transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+          </div>
         </div>
       </main>
     );
