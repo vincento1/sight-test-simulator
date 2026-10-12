@@ -61,7 +61,7 @@ export function TrackSelectView({
                   <BookOpen className="size-7" />
                 </div>
                 <Badge variant="outline" className="border-rose-400/40 bg-rose-500/20 text-xs font-semibold text-rose-200">
-                  <Sparkles className="size-3 mr-1" /> 300 Questões
+                  <Sparkles className="size-3 mr-1" /> 350 Questões
                 </Badge>
               </div>
 
@@ -73,9 +73,9 @@ export function TrackSelectView({
               </p>
 
               <p className="mt-3 text-sm text-white/70 leading-relaxed">
-                Pratique com 300 questões de múltipla escolha com correção imediata e gabarito comentado
-                cobrindo os sistemas <strong>Visual</strong>, <strong>Somatossensorial</strong> e{" "}
-                <strong>Auditivo</strong>.
+                Pratique com 350 questões de múltipla escolha com correção imediata e gabarito comentado
+                cobrindo os sistemas <strong>Visual</strong>, <strong>Somatossensorial</strong>, <strong>Auditivo</strong> e{" "}
+                <strong>Olfato e Gustação</strong>.
               </p>
             </div>
 
