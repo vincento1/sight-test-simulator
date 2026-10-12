@@ -19,13 +19,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "MedQuest: Simulador de 300 questões de Morfofuncional e Guia Semiológico Prático dos 12 Pares de Nervos Cranianos.",
+          "MedQuest: Simulador de 350 questões de Morfofuncional e Guia Semiológico Prático dos 12 Pares de Nervos Cranianos.",
       },
       { property: "og:title", content: "MedQuest | Morfofuncional e Habilidades Clínicas" },
       {
         property: "og:description",
         content:
-          "MedQuest: Simulador de 300 questões de Morfofuncional e Guia Semiológico Prático dos 12 Pares de Nervos Cranianos.",
+          "MedQuest: Simulador de 350 questões de Morfofuncional e Guia Semiológico Prático dos 12 Pares de Nervos Cranianos.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -43,6 +43,7 @@ const SUBJECT_CHOICES: { id: Subject; title: string; subtitle: string }[] = [
   { id: "visual", title: "Sistema Visual", subtitle: "Anatomia e vias da visão" },
   { id: "somato", title: "Sistema Somatossensorial", subtitle: "Receptores, vias e dor" },
   { id: "auditivo", title: "Sistema Auditivo", subtitle: "Orelha, cóclea e vias auditivas" },
+  { id: "olfato", title: "Olfato e Gustação", subtitle: "Nariz, língua e vias químicas" },
 ];
 
 function shuffle<T>(arr: T[]): T[] {
@@ -153,7 +154,7 @@ function Simulador() {
 
           {/* Description */}
           <p className="mt-6 max-w-xl text-base font-light leading-relaxed text-white/75 sm:text-lg">
-            Plataforma para ajudar nos estudos: simulado de <strong className="font-semibold text-rose-200">300 questões</strong> de Morfofuncional com gabarito comentado
+            Plataforma para ajudar nos estudos: simulado de <strong className="font-semibold text-rose-200">350 questões</strong> de Morfofuncional com gabarito comentado
             e módulo de revisão para <strong className="font-semibold text-rose-200">Habilidades Clínicas</strong> (Neurologia & Nervos Cranianos).
           </p>
 
@@ -161,7 +162,7 @@ function Simulador() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <div className="flex items-center gap-2 rounded-xl border border-rose-400/20 bg-rose-950/30 px-4 py-2 text-xs sm:text-sm text-rose-200/90 backdrop-blur-md">
               <BookOpen className="size-4 text-rose-400" />
-              <span>300 Questões Morfofuncional</span>
+              <span>350 Questões Morfofuncional</span>
             </div>
             <div className="flex items-center gap-2 rounded-xl border border-rose-400/20 bg-rose-950/30 px-4 py-2 text-xs sm:text-sm text-rose-200/90 backdrop-blur-md">
               <Stethoscope className="size-4 text-rose-400" />
