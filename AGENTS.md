@@ -10,3 +10,5 @@
 > the editor, so keep the branch in a working state.
 
 <!-- LOVABLE:END -->
+
+- Keep each additional question subject in a typed data module consumed by the shared question bank; this preserves the existing exam flow and centralized filtering.
