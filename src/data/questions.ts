@@ -5,7 +5,7 @@ export type Difficulty = "facil" | "media" | "dificil";
 
 export type Question = {
   id: number;
-  subject: "visual" | "somato" | "auditivo" | "olfato";
+  subject: "visual" | "somato" | "auditivo" | "olfato" | "motor";
   difficulty: Difficulty;
   statement: string;
   options: string[];
